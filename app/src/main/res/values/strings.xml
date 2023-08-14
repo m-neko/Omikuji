@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">おみくじ</string>
+    <string name="btn_start">おみくじを引く</string>
+    <string name="btn_end">終了する</string>
+</resources>
