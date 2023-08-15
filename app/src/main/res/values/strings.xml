@@ -2,4 +2,6 @@
     <string name="app_name">おみくじ</string>
     <string name="btn_start">おみくじを引く</string>
     <string name="btn_end">終了する</string>
+    <string name="btn_rev">戻る</string>
+    <string name="btn_history">これまでの運勢</string>
 </resources>
