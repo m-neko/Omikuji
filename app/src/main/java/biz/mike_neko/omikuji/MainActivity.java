@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         Button btnStart = findViewById(R.id.btnStart);
 
@@ -38,12 +44,20 @@ public class MainActivity extends AppCompatActivity {
     public void onClickBtnStart(View v){
         Intent intent = new Intent(getApplicationContext(),OmikujiActivity.class);
         startActivity(intent);
-        finish();
     }
 
     // 「これまでの運勢」ボタン
     public void onClickBtnHistory(View v){
         Intent intent = new Intent(getApplicationContext(),ListActivity.class);
         startActivity(intent);
+    }
+
+    // 「終了する」ボタン
+    public void OnClickBtnMainEnd(View v){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            finishAndRemoveTask();
+        }else{
+            finish();
+        }
     }
 }

@@ -62,7 +62,6 @@ public class OmikujiActivity extends AppCompatActivity {
 
         editor.putString("Kuji",kuji);
         editor.putString("Date",strDate);
-        // editor.putString("Kuji","");
         editor.commit();
     }
 
